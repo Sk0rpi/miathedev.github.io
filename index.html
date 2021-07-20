@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="NES.css is a NES-style CSS Framework." />
+  <meta name="keywords" content="html5,css,framework,sass,NES,8bit" />
+  <meta name="author" content="© 2021 Mia Metzler" />
+  <meta name="theme-color" content="#212529" />
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" sizes="196x196" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <title>Mia Metzler</title>
+
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <style>
+    .image-cropper {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    img {
+      display: inline;
+      margin: 0 auto;
+      height: 100%;
+      width: auto;
+    }
+  </style>
+  <link href="./style.css" rel="stylesheet" />
+  <script src="./lib/vue.min.js"></script>
+
+  <script src="./lib/dialog-polyfill.js"></script>
+  <script src="./lib/highlight.js"></script>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NES.css" />
+  <meta property="og:url" content="https://nostalgic-css.github.io/NES.css/" />
+  <meta property="og:description" content="NES-style CSS Framework | ファミコン風CSSフレームワーク" />
+  <meta property="og:image"
+    content="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@bc_rikko" />
+  <meta name="twitter:creator" content="@bc_rikko" />
+  <meta name="twitter:image"
+    content="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41640153-4"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag("js", new Date()); gtag("config", "UA-41640153-4");</script>
+  <script>
+    if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
+      window.alert('IE is not supported on this page.')
+    }
+
+  </script>
+</head>
+
+<body>
+  <div id="nescss">
+    <header :class="{ sticky: scrollPos > 50 }">
+      <div class="container">
+        <div class="nav-brand">
+          <a href="https://nostalgic-css.github.io/NES.css/">
+            <h1><i class="snes-jp-logo brand-logo"></i>Mia-Metzler.de</h1>
+          </a>
+          <p>Werkstudentin</p>
+        </div>
+
+        <div class="social-buttons">
+          <p>Social</p>
+          <div class="share">
+            <a href="https://www.linkedin.com/in/mia-metzler" target="_blank"><i class="nes-icon linkedin"></i></a>
+            <a href="https://github.com/miathedev" target="_blank"><i class="nes-icon github"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <main class="main-content">
+        <!-- About -->
+        <section class="topic left">
+          <h2 id="about"><a href="#about">#</a>Wer bin ich</h2>
+          <div class="image-cropper">
+            <img src="propic2.png" class="rounded" />
+          </div>
+          <p>Ich studiere Technische Informatik an der Hochschule Bremen. Das bedeutet soviel wie Informatik mit
+            Elektrotechnik. Nebenbei bin ich Werkstudentin im Bereich Embedded Engineering, ehemals DevOps. In Freizeit
+            angagiere ich mich viel sozial im Umfeld des Chaos Computer Clubs und mache gelegentlich kleinere Software
+            und Hardware Projekte</p>
+        </section>
+
+        <div class="nes-container with-title">
+          <p class="title">Lebenslauf</p>
+          <div class="lists">
+            <ul class="nes-list is-disc">
+              <li>Okt. 2018 - Dez. 2019</li>
+              <ul>
+                <li><a href="https://www.hmmh.de/"><button type="button" class="nes-btn is-success">hmmh AG</button></a>
+                  - Werkstudentin</li>
+                <ul>
+                  <li>DevOps: Jenkins, Gitlab, Unit/Integration Testing</li>
+                </ul>
+              </ul>
+              <li>Dez. 2019 - heute</li>
+              <ul>
+                <li><a href="https://www.engram.de/"><button type="button" class="nes-btn is-success">engram
+                      GmbH</button></a>
+                  - Werkstudentin</li>
+                <ul>
+                  <li>Embedded Systems: Entwickeln eines Betriebseigenem Betriebsystem</li>
+                </ul>
+              </ul>
+            </ul>
+          </div>
+        </div>
+
+
+
+
+      </main>
+
+      <footer>
+        <p>
+          <span>&copy;2021</span>
+          Mia Metzler
+        </p>
+      </footer>
+    </div>
+  </div>
+</body>
+<script src="./script.js"></script>
+<script>
+  const h = document.querySelector('head');
+  ['./lib/dialog-polyfill.css', './lib/highlight-theme.css'].forEach(a => {
+    const l = document.createElement('link');
+    l.href = a;
+    l.rel = 'stylesheet';
+    h.appendChild(l);
+  })
+</script>
+
+</html>

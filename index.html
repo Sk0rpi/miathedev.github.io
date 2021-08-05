@@ -38,6 +38,11 @@
   <script src="./lib/dialog-polyfill.js"></script>
   <script src="./lib/highlight.js"></script>
 
+  <!-- Neu von Dennis -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./typewriter.js"></script>
+  <!-- Ende -->
+
   <meta property="og:type" content="website" />
   <meta property="og:title" content="NES.css" />
   <meta property="og:url" content="https://nostalgic-css.github.io/NES.css/" />
@@ -85,7 +90,14 @@
       <main class="main-content">
         <!-- About -->
         <section class="topic left">
-          <h2 id="about"><a href="#about">#</a>Wer bin ich</h2>
+          <!-- Neu von Dennis -->
+          <div class="typewrite-box">
+            <h2><a href="#about">#</a></h2>
+            <h2 class="typewrite" data-period="2000" data-type='[ "Wer bin ich", "Selbstbewusst", "Wissbegierig", "Offen", "Kreativ", "Zielstrebig", "Motiviert", "Teamfähig", "Emanzipiert" ]' id="about">
+                <span class="wrap"></span>
+            </h2>
+          </div>
+          <!-- Ende -->
           <div class="image-cropper">
             <img src="propic2.png" class="rounded" />
           </div>
